@@ -1,8 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 #define MAX 10
-void insert();
-void del();
+void enqueue();
+void dqueue();
 
 int queuearray[MAX];
 int rear=-1;
@@ -19,10 +19,10 @@ main()
 		switch(choice)
 {
 	case 1:
-		insert();
+		enqueue()
 		break;
 		case 2:
-		del();	
+		dqueue();	
 			case 4:
 				exit(1);
 				default:
@@ -30,7 +30,7 @@ main()
 }
 	}	
 }
-void insert()
+void enqueue()
 {
 	int additem;
 	if(rear==MAX-1)
@@ -45,7 +45,7 @@ void insert()
 		queuearray[rear]=additem;
 	}
 }
-void del()
+void dqueue()
 {
 	if(front==-1||front > rear)
 	{
